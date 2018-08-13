@@ -1,0 +1,247 @@
+:root{
+	font-size: 16px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+}
+.banner{
+	display: flex;
+	flex-direction: column;
+	background-color: #0F6CA9;
+	color: white;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Merienda', cursive;
+}
+.banner .down-arrow{
+	position: absolute;
+	bottom: 0;
+}
+.down-arrow{
+	font-size: 3rem;
+	animation:arrow-animation 2s infinite;
+}
+@keyframes arrow-animation {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-40px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-20px);
+  }
+}
+#grad1 {
+    background: red; 
+   	background: linear-gradient(300deg, #077ea1, #8bac07, #e60251, #2d9208);
+	background-size: 800% 800%;
+	-webkit-animation: ColorChange 30s ease infinite;
+	-moz-animation: ColorChange 30s ease infinite;
+	animation: ColorChange 20s ease infinite;
+}
+@-webkit-keyframes ColorChange {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes ColorChange {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes ColorChange { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+}
+.about-header{
+	padding: 30px;
+	text-align: center;
+	font-size: 4rem;
+	font-style: bold;
+	font-family: 'Cookie', cursive;
+	text-shadow: 4px 2px 7px #ff0000;
+}
+.about-header:hover{
+	text-shadow: 4px 2px 7px blue;	
+}
+.column{
+	flex:50%;
+}
+.image-section{
+	text-align: center;
+}
+.imagee{
+	border:3px solid black;
+	border-radius: 50%;
+	max-height: 300px;
+	max-width: 250px;
+}
+.paragraph{
+	font-size: 1.3rem;
+	font-family: 'Lobster', cursive;
+}
+.code{
+	font-family: 'Source Code Pro', monospace;
+	color:red;
+}
+.skill-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.skill_img img{
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+	max-height: 200px;
+	max-width: 300px;
+}
+.row1{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding:20px;
+}
+.project-header{
+	padding: 30px;
+	text-align: center;
+	font-size: 4rem;
+	font-family: 'Cookie', cursive;
+	text-shadow: 4px 2px 7px #ff0000;
+}
+.box img{
+	max-height: 800px;
+	max-width: 600px;
+}
+.project-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.project-caption{
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+	font-size:2rem;
+}
+.box{
+	padding: 5px;
+	border:2px solid blue;
+	margin: 5px auto;
+}
+.box:hover{
+	box-shadow: 10px 10px 20px #3D9BE9;
+}
+.project-header:hover{
+	text-shadow: 4px 2px 7px blue;	
+}
+.row2{
+	text-align: center;
+	color: white;
+	background-color: #143D5F;
+	padding: 10px;
+	padding-bottom: 30px;
+}
+.contact-header{
+	font-size: 4rem;
+	font-family: 'Cookie', cursive;
+}
+.contact-content{
+	font-size: 1.8rem;
+}
+.project{
+	background-color: #DEEEFC
+}
+@media screen and (min-width:768px ){
+	.banner .card .heading{
+	font-size: 5rem;
+	}
+	.banner .sub-heading{
+		font-size: 3rem;
+	}
+	.row{
+		font-size: 1rem;
+	}
+}
+@media screen and (min-width: 480px) and (max-width:767px){
+	.banner .card .heading{
+	font-size: 3rem;
+	}
+	.banner .sub-heading{
+		font-size: 2rem;
+	}
+	.row{
+		flex-direction: column;
+		font-size: 1rem;
+	}
+	.imagee{
+		max-height: 200px;
+		max-width: 150px;
+	}
+	.skill_img img{
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 20px;
+		max-height: 150px;
+		max-width: 200px;
+	}
+	.box img{
+	height: 200px;
+	width: 300px;
+	}
+	.contact-content{
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 480px){
+	.banner .card .heading{
+	font-size: 2.5rem;
+	}
+	.banner .sub-heading{
+		font-size: 2rem;
+	}
+	.row{
+		flex-direction: column;
+		font-size: 1rem;
+	}
+	.imagee{
+		max-height: 200px;
+		max-width: 150px;
+	}
+	.skill_img img{
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 20px;
+		max-height: 100px;
+		max-width: 150px;
+	}
+	.box img{
+	height: 200px;
+	width: 250px;
+	}
+	.contact-content{
+		font-size: 1rem;
+	}
+}
